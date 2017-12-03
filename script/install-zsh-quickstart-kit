@@ -5,7 +5,7 @@
 
 set -e
 set -o pipefail
-# set -o xtrace
+set -o xtrace
 
 DEFAULT_HOME_PATH="$HOME"
 
@@ -46,9 +46,11 @@ install_zsh_quickstart () {
   read_home_path
 
   info "Copying ~/.dotFiles/zsh-quickstart-kit to $HOME_PATH"
+  rm -rf "$HOME_PATH"/zsh-quickstart-kit
   cp -R zsh-quickstart-kit "$HOME_PATH"
 
   info "Copying ~/.dotFiles/zsh-quickstart-kit to $HOME_PATH"
+  rm -rf "$HOME_PATH"/zgen
   cp -R zgen "$HOME_PATH"
 
   info "Configuring zsh by symlinking the .zshrc, .zsh_aliases and .zsh-completions from this repo into $HOME_PATH"

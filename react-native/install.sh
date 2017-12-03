@@ -3,7 +3,7 @@
 # brew cask install java
 # brew cask install android-sdk
 # brew cask install android-ndk
-# brew cask install intel-haxm
+# brew cask install intel-haxm3
 
 info () {
   printf "\r  [ \033[00;34m..\033[0m ] $1\n"
